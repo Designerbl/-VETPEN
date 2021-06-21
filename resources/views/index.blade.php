@@ -38,7 +38,7 @@
             </div>
 
             <div class="pb-4">
-                <a class="nav-link" href="#">О нас</a>                                
+                <a class="nav-link" href="#">О клинике</a>                                
             </div>
 
             <div class="pb-4">
