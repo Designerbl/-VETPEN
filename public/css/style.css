@@ -1,0 +1,667 @@
+/* Шрифты */
+@import 'fonts/stylesheet.css';
+@import 'bs-icons/font/bootstrap-icons.css';
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+
+/* Общие стили */
+body{
+  font-family: 'RotondaC', "Poppins";
+
+  padding: 0;
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+.container{
+  overflow: hidden
+}
+
+a{
+  text-decoration: none;
+  transition: 0.6s;
+}
+
+a:hover{
+  color: white;
+}
+
+h1,h2,h3,h4,h5,h6,p,a{
+  padding: 0;
+  margin: 0;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: white;
+  transition: 0.4s;
+
+  letter-spacing: 0.025em;
+
+  user-select: none;
+}
+
+h2{
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 70px;
+}
+
+h3{
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 55px;
+  text-align: center;
+}
+
+h6{
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 55px;
+  
+  color: #000000;
+}
+
+.text-align-justify{
+  text-align: justify;
+}
+
+/* Кастомные марджины/паддинги */
+.mt-6{
+  margin-top: 100px;
+}
+
+.py-6{
+  padding-top:128px;
+  padding-bottom:128px;
+}
+
+/* Цвета */
+.color-white{
+  color: white;
+}
+
+.color-blue{
+  color: #00BBFF;
+}
+
+.color-grey{
+  color: #777777;
+}
+
+/* ========================== Шапка */
+.header-background{
+  background-image: url(/img/Background-background.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+
+  position: relative;
+
+  height: 800px;
+}
+
+.wave{
+  background-image: url(/img/wave.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  position: absolute;
+
+  width: 100%;
+  height: 320px;
+
+  right: 0;
+  bottom: 0;
+}
+
+.nav-line{
+  color: white;
+}
+
+.phone_number{
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.btn{
+  padding: 16px 32px;
+}
+
+.btn-appointment{
+  background-color: white;
+  border-radius: 50px;
+
+  line-height: 20px;
+
+  color: #1CA6F3;
+}
+
+.text-intro{
+  z-index: 1;
+}
+
+.bi-list{
+  font-size: 32px;
+  line-height: 3px;
+}
+
+/* ========================== Тело сайта */
+/* Иконка скролла */
+.icon-scroll {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1em;
+  height: 3.125em;
+  transform: translateX(-50%) scale(2);
+  z-index: 99999;
+  color: #0DBAF9;
+}
+
+.icon-arrows::after,
+.icon-arrows::before {
+  content: '';
+}
+.icon-arrows span,
+.icon-arrows::after,
+.icon-arrows::before {
+  display: block;
+  width: 0.315em;
+  height: 0.315em;
+  border-right: 1px solid rgba(13,186,249,.8);
+  border-bottom: 1px solid rgba(13,186,249,.8);
+  margin: 0 0 0.125em 0.315em;
+  transform: rotate(45deg);
+  animation: mouse-scroll 1s infinite;
+  animation-direction: alternate;
+}
+
+.icon-arrows::before {
+  margin-top: 0.315em;
+  animation-delay: .1s;
+}
+
+.icon-scroll span {
+  animation-delay: .2s;
+}
+
+.icon-arrows::after {
+  animation-delay: .3s;
+}
+
+.icon-scroll .mouse {
+  height: 1.375em;
+  width: .875em;
+  border: 1px solid rgba(13,186,249,.8);
+  border-radius: 2em;
+}
+
+.icon-scroll .wheel {
+  position: relative;
+  display: block;
+  height: 0.1875em;
+  width: 0.1875em;
+  margin: 0.1875em auto 0;
+  background: rgba(13,186,249,.8);
+  animation: mouse-wheel 1.2s ease infinite;
+  border-radius: 50%;
+}
+
+@keyframes mouse-wheel {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(.375em);
+  }
+}
+
+@keyframes mouse-scroll {
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+/* ========================== Акции */
+/* Карточка с акцией */
+.card{
+  background: linear-gradient(116.59deg, #0DBAF9 0%, #38CAFF 100%);
+  border-radius: 10px;
+  padding: 32px;
+
+  width: 416px;
+  min-height: 250px;
+}
+
+.discount{
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  
+  padding-bottom: 4px;
+
+  color: #FFFFFF;
+}
+
+.discount-inner{
+  font-size: 18px;
+  text-align: justify;
+
+  color: #FFFFFF;
+}
+
+.btn-discount{
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 86px;
+  padding: 16px 32px 16px 32px;
+}
+
+.btn-discount-inner{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+
+  color: white;
+}
+
+.slick-slide {
+margin: 0px 12px;
+height: auto;
+}
+
+/* ========================== Услуги клиники */
+.slider-services-nav{
+  background-color: white;
+  border: 3px solid #FFFFFF;
+  border-radius: 10px;
+  text-align: center;
+  padding: 8px;
+}
+
+.services-text{
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+/* ========================== О клинике */
+/* ========================== Команда врачей */
+.doctor-info{
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #777777;
+}
+
+/* ========================== Отзывы наших клиентов */
+.btn-details{
+  background-color: #1CA6F3;
+  border-radius: 50px;
+
+  line-height: 20px;
+
+  color: white;
+}
+
+/* ========================== Вопросы и ответы */
+.question-card{
+  background: #FFFFFF;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
+  padding: 64px;
+  text-align: center;
+}
+
+.question-text{
+  font-weight: bold;
+  font-size: 24px;
+  padding-bottom: 24px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  font-weight: bold;
+  font-size: 20px;
+
+  color: #1CA6F3;
+  background-color: #FFFFFF;
+}
+
+.nav-pills .nav-link {
+  color: #BABABA;
+
+  font-weight: bold;
+
+  transition: all 0.5s
+}
+
+/* ========================== Оставить заявку */
+.form-control{
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.description-text{
+  text-align: justify;
+}
+
+.advantage{
+  display: flex;
+  padding: 16px 0;
+  align-items: center;
+}
+
+/* ========================= Подвал */
+.footer-background{
+  background-image: url(/img/Footer-background.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  
+  position: relative;
+
+  height: auto;
+  width: 100%;
+}
+
+.footer-inner2{
+  margin-top: 100px;
+  margin-bottom: 80px;
+  background-color: transparent;
+}
+
+.copyright2{
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 13px;
+
+  color: #FFFFFF;
+}
+
+/* BS иконки */
+.bi-geo-alt-fill, 
+.bi-clock-fill, 
+.bi-telephone-fill, 
+.bi-envelope-fill{
+  font-size: 18px;
+}
+
+/* Яндекс карта */
+#map > ymaps {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.map{
+  filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.15));
+  margin-top: auto;
+}
+
+.contacts-inner{
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 22px;
+
+  padding-left: 10px;
+}
+
+/* Кнопки соцсетей */
+.wrapper {
+  display: inline-flex;
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background-color: #6a3ce7;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #de463b;
+  color: #ffffff;
+}
+
+/* ====== Страница отзывов ====== */
+.r-navbar-gackground{
+  background-color: #0DBAF9;
+}
+
+.back{
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.back::before{
+  content: 	"<";
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.review-card{
+  background: #FFFFFF;
+  box-shadow: 4px 4px 10px rgba(13, 186, 249, 0.2);
+  border-radius: 10px;
+
+  padding: 32px 94px;
+  margin: 0px 10%;
+}
+
+.review-name{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.review-text{
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+
+  display: flex;
+  text-align: center;
+}
+
+/* .review-text::before{
+  content: "«";
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 74px;
+
+  color: #1DA7F4;
+}
+
+.review-text::after{
+  content: "»";
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 74px;
+
+  color: #1DA7F4;
+} */
+
+/* Блок отправки отзыва */
+.feedback{
+  background: #0DBAF9;
+  border-radius: 15px;
+
+  padding: 48px;
+}
+
+.feedback-caption{
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 55px;
+}
+
+.feedback-caption2{
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 27px;
+  
+  text-align: center;
+  
+  opacity: 0.7;
+}
+
+.feedback-input{
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+
+  padding: 20px;
+}
+
+.feedback-button{
+  padding: 14px 100px 14px 100px;
+  background: #FFFFFF;
+  border-radius: 30px;
+  border: none;
+}
+
+.feedback-button-inner{
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  
+  color: #0DBAF9;
+}
+
+
+/* Подвал страницы отзывов */
+.r-footer-background{
+  background-image: url(/img/R-footer-background.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  
+  height: auto;
+  width: 100%;
+}
+
+.copyright{
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #FFFFFF;
+}
+
+/* Адаптация */
+@media screen and (max-width: 1199px){
+
+  h2{
+    font-size: 64px;
+    line-height: 60px;
+  }
+
+  .question-card{
+    padding: 32px;
+  }  
+} 
+
+@media screen and (max-width: 991px){
+
+  h2{
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  .review-card{
+    padding: 32px 64px;
+  }
+
+  .question-card{
+    padding: 24px;
+  }  
+} 
+
+@media screen and (max-width: 767px){
+
+} 
+
