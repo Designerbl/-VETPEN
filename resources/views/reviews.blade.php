@@ -89,16 +89,21 @@
           <p class="feedback-caption2">Нам важно ваше мнение</p>
         </div>
         
-        <form action="">
+        <form action="{{ route('feedback-form') }}" id="" method="post">
+          
+          {{ csrf_field() }}
+
+          @include('components.messages')
+
           <div class="row g-4" novalidate="">
             <div class="col-lg-6 col-md-12">
-              <input class="feedback-input form-control" id="validationFIO" type="name" name="ФИО" placeholder="Ваше имя" required/>
+              <input class="feedback-input form-control" id="name" type="name" name="name" placeholder="Ваше имя"/>
             </div>
             <div class="col-lg-6 col-md-12">
-              <input class="feedback-input form-control" id="validationPet" type="name" name="Вид животного" placeholder="Вид животного" required/>
+              <input class="feedback-input form-control" id="pet_type" type="name" name="pet_type" placeholder="Вид животного"/>
             </div>
             <div class="col-12">
-              <textarea class="feedback-input form-control" id="exampleFormControlTextarea1" rows="3" name="Отзыв" placeholder="Отзыв" required></textarea>
+              <textarea class="feedback-input form-control" id="review_text" rows="3" name="review_text" placeholder="Отзыв"></textarea>
             </div>
             <div class="col-12 mt-5 d-flex justify-content-center">
               <button type="submit" class="feedback-button"><span class="feedback-button-inner">Отправить</span></button>
