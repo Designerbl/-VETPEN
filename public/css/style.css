@@ -537,6 +537,14 @@ height: auto;
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
+  text-align: center;
+}
+
+.review-pet{
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
 }
 
 .review-text{
@@ -544,7 +552,6 @@ height: auto;
   font-size: 18px;
   line-height: 20px;
 
-  display: flex;
   text-align: center;
 }
 
@@ -572,6 +579,14 @@ height: auto;
   border-radius: 15px;
 
   padding: 48px;
+}
+
+.number {
+  -moz-appearance: textfield;
+}
+
+.number::-webkit-inner-spin-button {
+  display: none;
 }
 
 .feedback-caption{
@@ -611,6 +626,10 @@ height: auto;
   line-height: 20px;
   
   color: #0DBAF9;
+}
+
+.alert-light{
+  color: red;
 }
 
 

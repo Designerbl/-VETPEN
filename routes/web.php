@@ -19,5 +19,11 @@ Route::get('/reviews', function () {
   return view('reviews');
 })->name('reviews');
 
-Route::get('/reviews/submit', 'FeedbackController@allData')->name('feedback-data');
+// Route::get('/reviews', function () {
+//   return view('reviews');
+// })->name('reviews-1');
+
+Route::get('/reviews', 'FeedbackController@allData') ->name('review');
 Route::post('/reviews/submit', 'FeedbackController@submit')->name('feedback-form');
+
+Route::post('/index/submit', 'OrderController@submit')->name('order-form');

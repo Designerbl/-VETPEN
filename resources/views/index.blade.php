@@ -574,7 +574,7 @@
         
         <p class="review-text">Хочу поблагодарить персонал клиники и отдельно Ситникову Наталью за чуткое и доброе отношение к животным. 
           Пользуюсь услугами клиники уже четыре года, за все время могу сказать только хорошее, животных действительно лечат!
-        </з>
+        </p>
 
       </div>
 
@@ -697,16 +697,19 @@
 
         <!-- Форма заполнения заявки -->
         <div class="col-12 col-lg-6">
-          <form class="feedback text-center">
+          <form class="feedback text-center" id="#order" action="{{ route('order-form') }}" method="post">
 
             <h6 class="text-white">Оставьте заявку</h6>
             <p class="text-white pb-4">Оставьте свои контактные данные и мы свяжемся с Вами в течение 10 минут.</p>
 
+            @include('components.messages_order')
+
             <!-- Поля ввода -->
             <div class="application-form">
-              <input type="text" class="form-control" id="validationDefault01" maxlength="64" placeholder="Ваше имя" required>
-              <input type="text" class="form-control my-3" id="validationDefault01" maxlength="64" placeholder="Имя вашего питомца" required>
-              <input type="text" class="form-control" id="validationDefault01" maxlength="64" placeholder="Номер телефона" required>
+              {{ csrf_field() }}
+              <input type="text" class="form-control" id="name_order" name="name_order" placeholder="Ваше имя">
+              <input type="text" class="form-control my-3" id="pet_order" name="pet_order"  placeholder="Ваш питомец">
+              <input type="text" class="form-control number" id="phone_order" name="phone_order" placeholder="Номер телефона">
             </div>
 
             <button type="submit" class="btn btn-appointment my-4">Отправить</button>
@@ -811,6 +814,16 @@
   <script src="/libs/bootstrap-5.0.1-dist/js/bootstrap.min.js"></script>
   <script src="/libs/jquery.min.js"></script>
   <script src="/libs/slick/slick.min.js"></script>
+  <script src="/libs/jquery.maskedinput.js"></script>
+
+  <script>
+    //Код jQuery, установливающий маску для ввода телефона элементу input
+    //1. После загрузки страницы,  когда все элементы будут доступны выполнить...
+    $(function(){
+      //2. Получить элемент, к которому необходимо добавить маску
+      $("#phone_order").mask("8(999) 999-99-99");
+    });
+  </script>
 
   <script>
     $(document).ready(function(){

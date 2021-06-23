@@ -15,6 +15,7 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/css/style.css"/>
+
   <script src="https://kit.fontawesome.com/bab5cae328.js" crossorigin="anonymous"></script>
 </head>
 

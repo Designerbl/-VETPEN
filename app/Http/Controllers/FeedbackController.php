@@ -18,11 +18,21 @@ class FeedbackController extends Controller{
     $feedback->save();
 
     // Переадресация
-    return redirect()->route('reviews')->with('success', 'Спасибо за отзыв');
+    return redirect()->route('review')->with('success', 'Спасибо за отзыв');
   }
 
   public function allData() {
-    return view('reviews', ['data'=> Feedback::all()]);
+
+    $feedback = new Feedback;
+    return view('review-card', ['data' => $feedback->orderBy('created_at', 'desc')->get()]);
+
+    // dd(Feedback::all());
+
+    // $feedback = Feedback::all();
+    // dd($feedback);
+
+    // $feedback = new Feedback;
+    // dd($feedback ->all());
   }
 
 }
