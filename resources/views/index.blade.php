@@ -29,6 +29,7 @@
 
           <!-- Меню -->
           <div class="offcanvas-body">
+
             <div class="py-4">
               <a class="nav-link active" aria-current="page" href="#">Услуги</a>
             </div>
@@ -101,7 +102,7 @@
 
               <!-- Кнопки в интро -->
               <div class=" d-flex d-md-block d-lg-flex align-items-center ">
-                <button type="button" class="btn btn-appointment">Записаться на прием</button>
+                <button type="button" class="btn btn-appointment" onClick='location.href="/#formorder"'>Записаться на прием</button>
                 <div class="ps-2 ps-md-5 pt-0 pt-md-2 pt-lg-0"><a class="text-white" href="tel:+7(383)2133212">+7 (383) 213-32-12</a></div>                 
               </div>
 
@@ -141,7 +142,7 @@
       <div class="variable-width slider">
 
         <!-- 1 -->
-        @include('components.discount')
+        @yield('discount')
 
         <!-- 2 -->            
         <div class="d-flex justify-content-center">
@@ -692,17 +693,17 @@
     </section>
 
     <!-- Оставить заявку -->
-    <section id="services" class="container py-5">
+    <section id="formorder" class="container py-5">
       <div class="row d-flex align-items-center">
 
         <!-- Форма заполнения заявки -->
         <div class="col-12 col-lg-6">
-          <form class="feedback text-center" id="#order" action="{{ route('order-form') }}" method="post">
+          <form class="feedback" id="#order" action="{{ route('order-form') }}" method="post">
 
-            <h6 class="text-white">Оставьте заявку</h6>
-            <p class="text-white pb-4">Оставьте свои контактные данные и мы свяжемся с Вами в течение 10 минут.</p>
+            <h6 class="text-white text-center">Оставьте заявку</h6>
+            <p class="text-white text-center pb-4">Оставьте свои контактные данные и мы свяжемся с Вами в течение 10 минут.</p>
 
-            @include('components.messages_order')
+            @include('components.messages')
 
             <!-- Поля ввода -->
             <div class="application-form">
@@ -712,7 +713,10 @@
               <input type="text" class="form-control number" id="phone_order" name="phone_order" placeholder="Номер телефона">
             </div>
 
-            <button type="submit" class="btn btn-appointment my-4">Отправить</button>
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-appointment my-4">Отправить</button>            
+            </div>
+
 
           </form>
         </div>

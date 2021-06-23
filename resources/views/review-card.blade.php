@@ -1,7 +1,7 @@
 {{-- @extends('layouts.app') --}}
 @extends('reviews')
 
-@section('content')
+
 @section('sec')
 
   <main>
@@ -33,5 +33,5 @@
 
   </main>
 @endsection
-@endsection
+
   

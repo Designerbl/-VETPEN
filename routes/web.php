@@ -26,4 +26,5 @@ Route::get('/reviews', function () {
 Route::get('/reviews', 'FeedbackController@allData') ->name('review');
 Route::post('/reviews/submit', 'FeedbackController@submit')->name('feedback-form');
 
+Route::get('/index', 'DiscountController@allData') ->name('home');
 Route::post('/index/submit', 'OrderController@submit')->name('order-form');

@@ -24,13 +24,15 @@ class OrderRequest extends FormRequest
     public function rules()
     {
         return [
+
           'name_order' => 'required|min:2|max:50',
           'pet_order' => 'required|min:2|max:50',
           'phone_order' => 'required',
+          
         ];
     }
 
-    public function messages_order(){
+    public function messages(){
       return[
         // Перевод валидации поля "Ваше имя"
         'name_order.required' => 'Поле "Ваше имя" является обязательным',
