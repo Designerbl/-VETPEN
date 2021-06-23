@@ -29,19 +29,6 @@
 
       <h3 class="py-5">Отзывы наших клиентов</h3>
 
-      {{-- <!-- Отзыв 1 -->
-      <div class="review-card d-grid justify-content-center mb-4">
-
-        <div class="d-grid justify-content-center pb-3">
-          <span class="review-name">Ксения</span>
-        </div>
-        
-        <span class="review-text">Хочу поблагодарить персонал клиники и отдельно Ситникову Наталью за чуткое и доброе отношение к животным. 
-          Пользуюсь услугами клиники уже четыре года, за все время могу сказать только хорошее, животных действительно лечат!
-        </span>
-
-      </div> --}}
-
       @yield('sec')
 
       <!-- Feedback -->

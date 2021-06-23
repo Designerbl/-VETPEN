@@ -143,76 +143,7 @@
 
         <!-- 1 -->
         @yield('discount')
-
-        <!-- 2 -->            
-        <div class="d-flex justify-content-center">
-          <div class="card d-flex align-items-start flex-column">
-            
-            <div class="pb-4">
-              <p class="discount">Бесплатно</p>
-              <p class="discount-inner">Обработаем вашего питомца от блох и клещей</p>
-            </div>
-
-            <div class="d-flex w-100 align-items-center justify-content-between">
-              <button type="submit" class="btn-discount"><span class="btn-discount-inner">Подробнее об акции</span></button>
-              <span class="color-white">до 1 сентября</span>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- 3 -->           
-        <div class="d-flex justify-content-center">
-          <div class="card d-flex align-items-start flex-column">
-
-            <div class="pb-4">
-              <p class="discount">10% скидка</p>
-              <p class="discount-inner">На вакцинацию и чипирование домашних животных</p>
-            </div>
-
-            <div class="d-flex w-100 align-items-center justify-content-between">
-              <button type="submit" class="btn-discount"><span class="btn-discount-inner">Подробнее об акции</span></button>
-              <span class="color-white">до 20 июля</span>
-            </div>
-
-          </div>
-        </div>
-      
-        <!-- 4 -->
-        <div class="d-flex justify-content-center">
-          <div class="card d-flex align-items-start flex-column">
-
-            <div class="pb-4">
-              <p class="discount">Test</p>
-              <p class="discount-inner">Test test test</p>
-              <p class="discount-inner">Test test test</p>
-            </div>
-
-            <div class="d-flex w-100 align-items-center justify-content-between">
-              <button type="submit" class="btn-discount"><span class="btn-discount-inner">Подробнее об акции</span></button>
-              <span class="color-white">до 30 июня</span>
-            </div>
-
-          </div>
-        </div>
-              
-        <!-- 5 -->
-        <div class="d-flex justify-content-center">
-          <div class="card d-flex align-items-start flex-column">
-
-            <div class="pb-4">
-              <p class="discount">Test 2</p>
-              <p class="discount-inner">Test test test</p>
-              <p class="discount-inner">Test test test</p>
-            </div>
-
-            <div class="d-flex w-100 align-items-center justify-content-between">
-              <button type="submit" class="btn-discount"><span class="btn-discount-inner">Подробнее об акции</span></button>
-              <span class="color-white">до 24 июня</span>
-            </div>
-
-          </div>
-        </div>
+    
 
       </div>
 
